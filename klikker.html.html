@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clicker</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var damage= 10;
+    var health= 1000;
+    var money= 0;
+
+      function klik(){
+        setTimeout(function(){
+          document.getElementById("image").src="img/monster.gif";
+        },1000);
+          document.getElementById("image").src="img/pijn.gif";
+
+        health = health-damage;
+
+      if (damage) {
+        if (health < 0)
+        {
+          document.getElementById("hp").innerHTML= "0 hp";
+        }
+        else
+        {
+          money += 10;
+          document.getElementById("hp").innerHTML= Math.floor(health)+ " hp";
+          document.getElementById("money").innerHTML= Math.floor(money)+ " euro";
+        }
+      }
+
+      }
+    </script>
+   <input type="image" src= "img/monster.gif" onclick="klik()" name="monster" value="monster" width="300" height="250" id="image">
+   <p id="hp"></p>
+   <p id="money"></p>
+   </body>
+</html>
